@@ -37,4 +37,7 @@
     <data name="FileNameMaxLength" xml:space="preserve">
         <value>The file name cannot be longer than {0} characters.</value>
     </data>
+    <data name="IdsEmpty" xml:space="preserve">
+        <value>Enter ids.</value>
+    </data>
 </root>

@@ -106,6 +106,15 @@ namespace ModelX.Logic.Resources.Common {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enter ids..
+        /// </summary>
+        internal static string IdsEmpty {
+            get {
+                return ResourceManager.GetString("IdsEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The username must be between {0} and {1} characters long..
         /// </summary>
         internal static string UsernameInvalid {

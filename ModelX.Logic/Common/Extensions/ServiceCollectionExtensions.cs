@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
+using ModelX.Logic.Common.Validators;
 
 namespace ModelX.Logic.Common.Extensions;
 
@@ -10,8 +11,8 @@ public static class ServiceCollectionExtensions
     {
         var validators = Assembly.GetExecutingAssembly().GetExportedTypes()
             .Where(t =>
-                t.BaseType?.ToString() ==
-                "FluentValidation.Validators.PropertyValidator`2[T,System.String]")
+                t.Namespace == "ModelX.Logic.Common.Validators" &&
+                t.Name != nameof(CommonValidatorsResource))
             .ToList();
 
         validators.ForEach(v => { services.AddScoped(v); });
