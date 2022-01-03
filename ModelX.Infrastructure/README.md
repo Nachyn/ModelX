@@ -1,0 +1,1 @@
+﻿dotnet ef migrations add Init -s '../ModelX' -o './Database/Migrations'
