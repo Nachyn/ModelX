@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using ModelX.Logic.CQRS.Attachments.Commands.DeleteAttachments;
 using ModelX.Logic.CQRS.Attachments.Commands.UploadAttachments;
 using ModelX.Logic.CQRS.Attachments.Queries.DownloadAttachment;
+using ModelX.Logic.CQRS.Attachments.Queries.GetAttachments;
 
 namespace ModelX.Controllers;
 
@@ -32,5 +33,12 @@ public class AttachmentsController : ApiController
         [FromBody] DeleteAttachmentsCmd cmd)
     {
         return await Mediator.Send(cmd);
+    }
+
+    [HttpGet]
+    [Authorize]
+    public async Task<GetAttachmentsResponseDto> GetAttachments()
+    {
+        return await Mediator.Send(new GetAttachmentsQ());
     }
 }
