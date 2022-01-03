@@ -28,6 +28,9 @@ public static class AppSettingHelperExtensions
             }
         );
 
+        services.Configure<FileSettings>(
+            configuration.GetSection("FileSettings"));
+
         ConfigureEntities(services, configuration);
 
         return services;

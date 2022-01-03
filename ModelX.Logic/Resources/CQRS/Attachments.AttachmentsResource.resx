@@ -18,23 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-
-    <data name="EmailInvalid" xml:space="preserve">
-        <value>Invalid email.</value>
+    <data name="FilesEmpty" xml:space="preserve">
+        <value>Files are missing.</value>
     </data>
-    <data name="UsernameInvalid" xml:space="preserve">
-        <value>The username must be between {0} and {1} characters long.</value>
-    </data>
-    <data name="FileNull" xml:space="preserve">
-        <value>File missing.</value>
-    </data>
-    <data name="FileErrorType" xml:space="preserve">
-        <value>Invalid file format.</value>
-    </data>
-    <data name="FileMaxLength" xml:space="preserve">
-        <value>The file size cannot exceed {0} bytes.</value>
-    </data>
-    <data name="FileNameMaxLength" xml:space="preserve">
-        <value>The file name cannot be longer than {0} characters.</value>
+    <data name="FileNotFound" xml:space="preserve">
+        <value>File not found.</value>
     </data>
 </root>

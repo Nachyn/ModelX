@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ModelX.Logic.Resources.Common {
+namespace ModelX.Logic.Resources.CQRS {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace ModelX.Logic.Resources.Common {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Validators_CommonValidatorsResource {
+    internal class Attachments_AttachmentsResource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Validators_CommonValidatorsResource() {
+        internal Attachments_AttachmentsResource() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ModelX.Logic.Resources.Common {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ModelX.Logic.Resources.Common.Validators.CommonValidatorsResource", typeof(Validators_CommonValidatorsResource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ModelX.Logic.Resources.CQRS.Attachments.AttachmentsResource", typeof(Attachments_AttachmentsResource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,56 +61,20 @@ namespace ModelX.Logic.Resources.Common {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Invalid email..
+        ///   Looks up a localized string similar to File not found..
         /// </summary>
-        internal static string EmailInvalid {
+        internal static string FileNotFound {
             get {
-                return ResourceManager.GetString("EmailInvalid", resourceCulture);
+                return ResourceManager.GetString("FileNotFound", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Invalid file format..
+        ///   Looks up a localized string similar to Files are missing..
         /// </summary>
-        internal static string FileErrorType {
+        internal static string FilesEmpty {
             get {
-                return ResourceManager.GetString("FileErrorType", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The file size cannot exceed {0} bytes..
-        /// </summary>
-        internal static string FileMaxLength {
-            get {
-                return ResourceManager.GetString("FileMaxLength", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The file name cannot be longer than {0} characters..
-        /// </summary>
-        internal static string FileNameMaxLength {
-            get {
-                return ResourceManager.GetString("FileNameMaxLength", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to File missing..
-        /// </summary>
-        internal static string FileNull {
-            get {
-                return ResourceManager.GetString("FileNull", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The username must be between {0} and {1} characters long..
-        /// </summary>
-        internal static string UsernameInvalid {
-            get {
-                return ResourceManager.GetString("UsernameInvalid", resourceCulture);
+                return ResourceManager.GetString("FilesEmpty", resourceCulture);
             }
         }
     }

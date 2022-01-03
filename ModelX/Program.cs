@@ -80,6 +80,8 @@ app.UseSwaggerUi3(settings =>
     settings.DocumentPath = specificationRoute;
 });
 app.UseRouting();
+app.UseAuthentication();
+app.UseAuthorization();
 app.UseCustomExceptionHandler();
 app.UseHealthChecks("/health");
 app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
