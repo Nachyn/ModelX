@@ -18,6 +18,8 @@ public class AppDbContext : IdentityDbContext<AppUser, IdentityRole<int>, int>, 
 
     public DbSet<Token> Tokens { get; set; }
 
+    public DbSet<Model> Models { get; set; }
+
     public override Task<int> SaveChangesAsync(
         CancellationToken cancellationToken = default)
     {

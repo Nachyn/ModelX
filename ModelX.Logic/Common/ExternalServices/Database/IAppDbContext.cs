@@ -11,5 +11,7 @@ public interface IAppDbContext
 
     DbSet<Token> Tokens { get; set; }
 
+    DbSet<Model> Models { get; set; }
+
     Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
 }

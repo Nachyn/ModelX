@@ -12,4 +12,7 @@ public class Attachment
     public string Path { get; set; }
 
     public DateTime LoadedUtc { get; set; }
+
+
+    public Model Model { get; set; }
 }
