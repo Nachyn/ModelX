@@ -38,6 +38,10 @@
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>Attachments.AttachmentsResource.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <EmbeddedResource Update="Resources\CQRS\Models.ModelsResource.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Models.ModelsResource.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>
@@ -55,6 +59,11 @@
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>Attachments.AttachmentsResource.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\CQRS\Models.ModelsResource.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Models.ModelsResource.resx</DependentUpon>
       </Compile>
     </ItemGroup>
     
