@@ -31,6 +31,9 @@ public static class AppSettingHelperExtensions
         services.Configure<FileSettings>(
             configuration.GetSection("FileSettings"));
 
+        services.Configure<EndpointsConfig>(
+            configuration.GetSection("EndpointsConfig"));
+
         ConfigureEntities(services, configuration);
 
         return services;

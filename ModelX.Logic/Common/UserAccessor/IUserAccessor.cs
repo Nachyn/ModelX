@@ -7,4 +7,6 @@ public interface IUserAccessor
     public ClaimsPrincipal User { get; }
 
     public int UserId { get; }
+
+    public string Host { get; }
 }
