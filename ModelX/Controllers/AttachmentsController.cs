@@ -20,8 +20,7 @@ public class AttachmentsController : ApiController
     }
 
     [HttpGet("{FileId}")]
-    [Authorize]
-    public async Task<FileContentResult> UploadAttachments(
+    public async Task<FileContentResult> DownloadAttachment(
         [FromRoute] DownloadAttachmentQ q)
     {
         return await Mediator.Send(q);

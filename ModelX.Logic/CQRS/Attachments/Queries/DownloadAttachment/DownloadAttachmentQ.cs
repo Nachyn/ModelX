@@ -7,7 +7,6 @@ using ModelX.Logic.Common.AppConfigs.Main;
 using ModelX.Logic.Common.Exceptions.Api;
 using ModelX.Logic.Common.ExternalServices.Database;
 using ModelX.Logic.Common.ExternalServices.FileService;
-using ModelX.Logic.Common.UserAccessor;
 
 namespace ModelX.Logic.CQRS.Attachments.Queries.DownloadAttachment;
 
@@ -26,18 +25,14 @@ public class DownloadAttachmentQHandler : IRequestHandler<DownloadAttachmentQ, F
 
     private readonly RootFileFolderDirectory _rootDirectory;
 
-    private readonly IUserAccessor _userAccessor;
-
     public DownloadAttachmentQHandler(IAppDbContext context
         , IStringLocalizer<AttachmentsResource> attachmentLocalizer
         , IFileService fileService
-        , IOptions<RootFileFolderDirectory> rootDirectory
-        , IUserAccessor userAccessor)
+        , IOptions<RootFileFolderDirectory> rootDirectory)
     {
         _context = context;
         _attachmentLocalizer = attachmentLocalizer;
         _fileService = fileService;
-        _userAccessor = userAccessor;
         _rootDirectory = rootDirectory.Value;
     }
 
@@ -45,8 +40,7 @@ public class DownloadAttachmentQHandler : IRequestHandler<DownloadAttachmentQ, F
         , CancellationToken cancellationToken)
     {
         var attachment = await _context.Attachments
-            .FirstOrDefaultAsync(f => f.Id == request.FileId
-                                      && f.OwnerId == _userAccessor.UserId, cancellationToken);
+            .FirstOrDefaultAsync(f => f.Id == request.FileId, cancellationToken);
 
         if (attachment == null)
         {
