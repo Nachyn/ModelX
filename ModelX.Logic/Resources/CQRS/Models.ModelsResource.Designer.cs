@@ -59,5 +59,14 @@ namespace ModelX.Logic.Resources.CQRS {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Model not found..
+        /// </summary>
+        internal static string ModelNotFound {
+            get {
+                return ResourceManager.GetString("ModelNotFound", resourceCulture);
+            }
+        }
     }
 }

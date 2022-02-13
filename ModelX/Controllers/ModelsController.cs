@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ModelX.Logic.CQRS.Models.Commands.DeleteModels;
 using ModelX.Logic.CQRS.Models.Commands.PutModels;
+using ModelX.Logic.CQRS.Models.Queries.GetModel;
 using ModelX.Logic.CQRS.Models.Queries.GetModels;
 
 namespace ModelX.Controllers;
@@ -30,5 +31,13 @@ public class ModelsController : ApiController
     public async Task<List<GetModelsModelDto>> GetModels()
     {
         return await Mediator.Send(new GetModelsQ());
+    }
+
+    [HttpGet("{Id}")]
+    [Authorize]
+    public async Task<GetModelResponeDto> GetModel(
+        [FromRoute] GetModelQ q)
+    {
+        return await Mediator.Send(q);
     }
 }
